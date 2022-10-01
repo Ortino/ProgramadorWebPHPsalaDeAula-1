@@ -19,6 +19,15 @@
         $total = ($num1 + $num2);
 		echo "A soma de ".$num1." + ".$num2." = ". ($num1 + $num2);
 		echo "<br>A soma de ".$num1." + ".$num2." = ". $total;
+    echo "<br>";
+    echo "A soma de ".$num1." - ".$num2." = ". ($num1 - $num2);
+    echo "<br>";
+		echo "A soma de ".$num1." * ".$num2." = ". ($num1 * $num2);
+    echo "<br>";
+		echo "A soma de ".$num1." / ".$num2." = ". ($num1 / $num2);
+    echo "<br>";
+		echo "A soma de ".$num1." % ".$num2." = ". ($num1 % $num2);
+		
     ?>
     <br/>
     <br/>
