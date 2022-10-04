@@ -31,14 +31,29 @@ O programa deverá calcular o valor a ser pago.
     <fieldset>
         <legend>Dados do Produto</legend>
     <?php
-    
+        $valor = $_GET["valor"];
+        $qtd = $_GET["qtd"];
 
+        $total = $valor * $qtd;
+        $desconto = ($total * 10) / 100; // $total * .10
+        $valor_a_vista = $total - $desconto;
+        $acrescimo = $total * .15;
+        $valor_total_parcelado = $total + $acrescimo; 
+        $valor_parcelas = $valor_total_parcelado / 10;
+
+        echo "*********** Formas de Pagamento *********** <br>";
+        echo "Valor do Produto: R$ ". number_format($total, 2, ",", ".");
+        echo "<br>Valor de Desconto pagando a vista: R$ ". number_format($desconto, 2, ",", ".");
+        echo "<br>Valor do Produto a vista: R$ " . number_format($valor_a_vista, 2, ",", ".");
+        echo "<br>Valor Acrescido em Pagamento parcelado: R$ " . number_format($acrescimo, 2, ",", ".");
+        echo "<br>Valor das 10 parcelas: R$ ". number_format($valor_parcelas, 2, ",", ".");
+        echo "<br>Valor Total parcelado: R$ ". number_format($valor_total_parcelado, 2, ",", ".");
     ?>
     <br>
     </fieldset>
     <br>
     <br>
-	<a href="prog1.php">Voltar</a>
+	<a href="prog1.html">Voltar</a>
     
 </div>
 </body>
