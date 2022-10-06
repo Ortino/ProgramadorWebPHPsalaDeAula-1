@@ -47,12 +47,22 @@ total a ser pago com os possíveis descontos.
 
         $valor_total_desconto = $total - $desconto1 -$desconto2;
 
+        echo "Valor do Produto R$ ". number_format($valor, 2, ",", ".") . ", a Quantidade é: ". $qtd;
+        echo "<br>";
+        echo "Desconto 1 = R$ " . number_format($desconto1, 2, ",", ".");
+        echo "<br>";
+        echo "Desconto 2 = R$ ". number_format($desconto2, 2, ",", ".");
+        echo "<br>";
+        echo "Valor total = R$ " . number_format($total, 2, ",", ".");
+        echo "<br>";
+        echo "Valor com descontos = R$ " . number_format($valor_total_desconto, 2, ",", ".");
+
     ?>
     <br>
     </fieldset>
     <br>
     <br>
-	<a href="prog1.html">Voltar</a>
+	<a href="prog5.html">Voltar</a>
     
 </div>
 </body>
