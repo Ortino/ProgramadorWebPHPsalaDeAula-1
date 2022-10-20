@@ -35,6 +35,10 @@
        pulaLinha(1);
        echo "<h4 style='text-align: center;'>-----------------------------</h4>";
        soma(15, 78);
+       soma2(15, 78, 55, 1, 2);
+       subtracao(20, 8);
+       multiplicacao(7, 3);
+       divisao(15, 0);
 
         ?>
         </pre>
