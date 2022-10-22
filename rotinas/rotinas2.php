@@ -23,16 +23,22 @@
         <hr>
         <br>
         <pre>
-        <?php
+            <?php
         
-        include "funcoes.php";
-        include "funcoes2.php";
-
+        require_once "funcoes.php";
+        require_once "funcoes3.php";
+        
         escreva_texto2("Meu texto executado por uma Procedimento.");
+        echo "<hr>";
+        pulaLinha(0);
+        echo "Texto exemplo..."; 
+        escreva_texto2("Meu texto executado por uma Procedimento.");
+        
         // $texto = escreva_texto3("Meu texto executado por uma função com retorno.");
         // echo "Texto recebido => $texto"; 
-        pulaLinha(0);
+        // pulaLinha(0);
         echo "Texto recebido => " . escreva_texto3("TESTE!!!!"); 
+        echo escreva_texto4("TESTE!!!!"); 
         pulaLinha(0);
         echo "".escreva_texto3("--------------------------------------");
         pulaLinha(0);
@@ -62,8 +68,8 @@
         pulaLinha(0);
         echo "Qual é o valor: ". $num2; 
         pulaLinha(0);
-
-
+        include_once "funcoes.php";
+        require_once "funcoes2.php";
         ?>
         </pre>
 

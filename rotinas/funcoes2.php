@@ -5,14 +5,19 @@ function escreva_texto3($qualquer_coisa){
     return $qualquer_coisa;
  }
 
+ //Procedimento de teste..
+function escreva_texto4($qualquer_coisa){
+    echo $qualquer_coisa;
+ }
+
  function somaR($num1, $num2){//Passagem por valor
      $total = $num1 + $num2;
      $num2 = 10;
     return $total;
 }
- function somaR2(&$num1, &$num2){//Passagem por referência
-     $total = $num1 + $num2;
-     $num2 = 10;
+ function somaR2(&$numx, &$numy){//Passagem por referência
+     $total = $numx + $numy;
+     $numy = 10;
     return $total;
 }
 
