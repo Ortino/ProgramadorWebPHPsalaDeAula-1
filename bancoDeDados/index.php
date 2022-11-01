@@ -10,6 +10,7 @@
         } else {
             //real_escape_string() = função que retorna uma string sem caractere especiais...
             $email = $conexao->real_escape_string($_POST["email"]);
+            // $email = $_POST["email"];
             $senha = $conexao->real_escape_string($_POST["senha"]);
 
             $sql_code = "select *  from usuario where login = '$email' and senha = '$senha'";
@@ -20,7 +21,7 @@
             if($qtd == 1){
                 // array ([id]=>1, [nome]=> "Ususário de Teste", [login] => "teste@gmail.com", [senha]=> "teste123")
                 $usuario = $sql_query->fetch_assoc();
-
+                //  ! = não
                 if(!isset($_SESSION)){
                     session_start();
                 }
@@ -47,6 +48,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/estilo.css" />
     <title>Senac - Curso de PHP</title>
 </head>
