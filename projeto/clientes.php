@@ -10,7 +10,7 @@
 	<body>
 		<?php include "html/header.php" ?>
 		<main>
-			<h1>Padrão</h1>
+			<h1>Clientes</h1>
 		</main>
 <?php
 	include "html/rodaPe.php";
