@@ -19,11 +19,21 @@
             $lista = $sql_query->fetch_all(MYSQLI_ASSOC);
             // var_dump($lista);
         }
+
+        if(!isset($_SESSION)){
+            session_start();
+        }
+    
+        $id = isset($_SESSION["id"]) ? $_SESSION["id"] : 0;
+        $nome = isset($_SESSION["nome"]) ? $_SESSION["nome"] : "";
+
+        echo "ID: $id - Cliente: $nome";
         ?>
 
         <main>
 			<h1>Clientes</h1>
             <h3>Lista de cadastrados</h3>
+            <div class="table-responsive">
             <table class="table table-bordered">
                 <tr>
                     <th>ID</th>
@@ -57,6 +67,7 @@
                    <?php endforeach ?> 
                 </tr>
             </table>
+            </div>
 		</main>
 
 

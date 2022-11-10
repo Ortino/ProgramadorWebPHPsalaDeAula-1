@@ -152,7 +152,7 @@
 					<label for="estadoc" class="form-label">Estado civil</label>
 					<select class="form-select" id="estadoc" name="estado_civil" required>
 						<option selected disabled value="">Selecione</option>
-						<option value="Solterio">Solterio(a)</option>
+						<option value="Solteiro">Solterio(a)</option>
 						<option value="Casado">Casado(a)</option>
 						<option value="Divorciado">Divorciado(a)</option>
 						<option value="Viuvo">Viuvo(a)</option>

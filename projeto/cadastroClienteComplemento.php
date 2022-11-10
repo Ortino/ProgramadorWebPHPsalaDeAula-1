@@ -32,7 +32,7 @@
         <!-- --------------------------------------------------- -->
         <div class="container-fluid">
         <form class="row g-3 container-fluid" name="f" action="" method="post">
-            <input type="text" class="form-control" id="id_cliente" name="idcliente" value="" hidden>
+            <input type="text" class="form-control" id="id_cliente_e" name="idcliente" value="" hidden>
             
             <div class="col-md-3 col-sm-12">
                 <label for="tipo_id" class="form-label">Tipo</label>
@@ -73,8 +73,8 @@
             </div>
                         
             <div class="col-12">
-                <button class="btn btn-primary" type="submit" id="btn-off" disabled style="display: none">Cadastrar</button>
-                <button class="btn btn-primary" type="submit" id="btn-on" >Cadastrar</button>
+                <button class="btn btn-primary" type="submit" id="btn-off1" disabled style="display: none">Cadastrar</button>
+                <button class="btn btn-primary" type="submit" id="btn-on1" >Cadastrar</button>
             </div>
         </form>
     </div>
@@ -93,7 +93,7 @@
             <!-- --------------------------------------------------- -->
             <div class="container-fluid">
         <form class="row g-3 container-fluid" name="c" action="" method="post">
-            <input type="text" class="form-control" id="id_cliente" name="idcliente" value="" hidden>
+            <input type="text" class="form-control" id="id_cliente_c" name="idcliente" value="" hidden>
             
             <div class="col-md-3 col-sm-12">
                 <label for="tipo_id_con" class="form-label">Tipo</label>
@@ -115,8 +115,8 @@
             </div>
                         
             <div class="col-12">
-                <button class="btn btn-primary" type="submit" id="btn-off" disabled style="display: none">Cadastrar</button>
-                <button class="btn btn-primary" type="submit" id="btn-on" >Cadastrar</button>
+                <button class="btn btn-primary" type="submit" id="btn-off2" disabled style="display: none">Cadastrar</button>
+                <button class="btn btn-primary" type="submit" id="btn-on2" >Cadastrar</button>
             </div>
         </form>
     </div>
