@@ -27,7 +27,7 @@
         $id = isset($_SESSION["id"]) ? $_SESSION["id"] : 0;
         $nome = isset($_SESSION["nome"]) ? $_SESSION["nome"] : "";
 
-        echo "ID: $id - Cliente: $nome";
+        // echo "ID: $id - Cliente: $nome";
         ?>
 
         <main>
