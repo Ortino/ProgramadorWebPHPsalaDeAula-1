@@ -60,11 +60,14 @@
 			$deu_certo = move_uploaded_file($foto["tmp_name"], $caminho);
 			//img/produtos/1654vbfdsvb6fds4.png
 			if($deu_certo){
-				$sql_code = "INSERT INTO produtos VALUES (NULL, '$nome', '$tipo', '$categoria', '$facricante', '$descricao', '$caminho', true)";
+				$sql_code = "INSERT INTO produtos VALUES (NULL, '$nome', '$tipo', '$categoria', '$fabricante', '$descricao', '$caminho', true)";
 
 				$sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error . "<br>" . var_dump($conexao->error));
-
-				
+				if($sql_query){
+					echo "Gravou!";
+				} else {
+					echo "Não gravou!";
+				}
 
 				echo "<p>Arquivo enviado com sucesso! Para acessá-lo clique aqui:
 				<a target='_blank' href='$pasta$nomeDaFoto.$extensao'>Foto</a> 
