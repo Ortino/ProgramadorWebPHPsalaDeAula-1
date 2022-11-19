@@ -53,6 +53,9 @@
                 header("Location: ../../../cadastroFuncionario.php?gravado=0");
             }
 
+        } else {
+
+            header("Location: ../../../cadastroFuncionario.php");
         }
 
         header("Location: ../../../cadastroFuncionario.php");
