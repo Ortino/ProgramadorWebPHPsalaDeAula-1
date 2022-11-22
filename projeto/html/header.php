@@ -108,7 +108,12 @@
 
 							<!-- <input type="submit" value="Entrar" class="btn btn-primary"> -->
 
-							<a href="cadastroFuncionario.php">Cadastro de Funcionário</a>
+							<?php
+						if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){
+							echo "<a href='cadastroFuncionario.php'>Cadastro de Funcionário</a>";
+						}?>
+
+							
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
