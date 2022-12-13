@@ -11,9 +11,9 @@
 	<!--  -->
 	<body>
 		<?php 
-        include "html/header.php";
 		require_once "src/protect.php";
-
+		include "html/header.php";
+		
 		if(isset($_SESSION['id'])){
 			$id = $_SESSION['id'];
 		}
@@ -35,10 +35,10 @@
 					</div>
 				</a>
 
-				<a href="#">
+				<a href="cadastroClienteComplemento.php?aba=1">
 					<div class="col">
 						<div class="card" >
-						<i class="bi bi-house text-center text-danger" style="font-size: 10rem;"></i>
+						<i class="bi bi-house text-center <?php if(isset($id)){ echo "text-danger";}else{ echo "text-prime";} ?> " style="font-size: 10rem;"></i>
 							<div class="card-body">
 								<h5 class="card-title text-center">Endereço</h5>
 								
@@ -47,7 +47,7 @@
 					</div>
 				</a>
 				
-				<a href="#">
+				<a href="cadastroClienteComplemento.php?aba=2">
 					<div class="col">
 						<div class="card" >
 						<i class="bi bi-telephone text-center text-danger" style="font-size: 10rem;"></i>
