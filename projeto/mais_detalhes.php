@@ -8,24 +8,73 @@
 
 	<!--  -->
 	<body>
-		<?php include "html/header.php" ?>
+		<?php 
+        include "html/header.php";
+        require_once "src/conexao.php";
+        include_once "src/model/Produto.php";
+        include_once "src/model/Estoque.php";
+        
+        $id = isset($_GET["id"]) ? $_GET["id"] : 0;
+
+        $sql_code = "SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = '$id'";
+        $sql_query = $conexao->query($sql_code);
+
+    if ($sql_query->num_rows > 0) {
+        $estoque = $sql_query->fetch_assoc();
+        $objProduto = new Produto(
+            $estoque['idproduto'],
+            $estoque['nome'],
+            $estoque['tipo'],
+            $estoque['categoria'],
+            $estoque['fabricante'],
+            $estoque['descricao'],
+            $estoque['foto'],
+            $estoque['ativo']
+        );
+        if(isset($estoque['idestoque'])){
+            $objEstoque = new Estoque(
+                $estoque['idestoque'],
+                $objProduto,
+                $estoque['qtd'],
+                $estoque['registro'],
+                $estoque['data_registro'],
+                $estoque['valor_compra'],
+                $estoque['valor_venda']
+            );
+        }else {
+            $objEstoque = new Estoque(
+                0,
+                $objProduto,
+                0,
+                '---',
+                '---',
+                0.0,
+                0.0
+            );
+
+        }
+
+    } 
+
+    
+        ?>
 		<main>
 		<h1>Detalhes do produto</h1>
         <div class="card">
-            <img src="" style="width: 20rem; margin: auto" class="card-img-top" alt="...">
+            <img src="<?= $estoque['foto'] ?>" style="width: 20rem; margin: auto" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
+                <h5 class="card-title"><?= $estoque['nome'] ?></h5>
+                <p class="card-text"><?= $estoque['descricao'] ?></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">TIPO: </li>
-                <li class="list-group-item">CATEGORIA: </li>
-                <li class="list-group-item">EM ESTOQUE: </li>
-                <li class="list-group-item">Valor: R$ </li>
+                <li class="list-group-item">TIPO: <?= $estoque['tipo'] ?></li>
+                <li class="list-group-item">CATEGORIA: <?= $estoque['categoria'] ?></li>
+                <li class="list-group-item">EM ESTOQUE: <?= $estoque['qtd'] ?></li>
+                <li class="list-group-item">Valor: R$ <?= $estoque['valor_venda'] ?> </li>
             </ul>
             <div class="card-body">
                 <a href="index.php" class="card-link">Voltar</a>
-                <a href="produtos.php" class="card-link">Lista de Produtos</a>
+                <a href="produtos.php" class="card-link">Lista de Produtos</a><a href="?<?='id='. $id ."&adicionar=". $objEstoque->getIdEstoque()  ?>" <?= (!isset($estoque['qtd']) || $estoque['qtd'] < 1 ) ?'hidden' : '' ?> class="card-link">Adicionar ao carrinho</a>
             </div>
         </div>
 		</main>

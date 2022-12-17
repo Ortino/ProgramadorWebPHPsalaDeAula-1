@@ -6,7 +6,18 @@ $login = isset($_COOKIE['login']) ? $_COOKIE['login'] : '';
 				<figure id="logo">
 					<img src="img/favicon.ico" alt="Logo">
 				</figure>
-				<input type="text" name="buscar" id="buscar" placeholder="Busque aqui" >
+				
+				<!-- <input type="text" name="buscar" id="buscar" placeholder="Busque aqui" > -->
+				
+				<form action="produtos.php" method="get">
+					<div id="buscar" class="input-group">
+						<input class="form-control" type="text" name="buscado"  placeholder="Busque aqui" required>
+						<button class="btn btn-primary" id="btn-buscar">
+							<i class="bi bi-search"></i>
+						</button>
+					</div>
+				</form>
+
 				<h1 id="textoEnviamos">Enviamos produtos para todo o território nacional.</h1>
 				<figure style="border: none">
 					<img id="carrinho" src="img/carrinhoCompra.png" alt="">

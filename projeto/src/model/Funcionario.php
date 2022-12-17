@@ -1,41 +1,38 @@
 <?php
 
-class Cliente
+class Funcionario
 {
     //O que eu tenho
-    private int $idCliente;
+    private int $idFuncionario;
     private string $nome;
     private string $dataNascimento;
-    private string $orgao;
-    private string $rg;
     private string $cpf;
     private string $estadoCivil;
-    private string $sexo;
+    private string $tipo;
+    private string $celular;
     private string $email;
     private string $senha;
     private bool $ativo;
 
     public function __construct(
-        int $idCliente,
+        int $idFuncionario,
         string $nome,
         string $dataNascimento,
-        string $orgao,
-        string $rg,
         string $cpf,
         string $estadoCivil,
-        string $sexo,
+        string $tipo,
+        string $celular,
         string $email,
         string $senha,
         bool $ativo
     ) {
-        $this->idCliente = $idCliente;
+        $this->idFuncionario = $idFuncionario;
         $this->validaNome($nome);
         $this->dataNascimento = $dataNascimento;
-        $this->orgao = $orgao;
-        $this->rg = $rg;
         $this->cpf = $cpf;
         $this->estadoCivil = $estadoCivil;
-        $this->sexo = $sexo;
+        $this->tipo = $tipo;
+        $this->celular = $celular;
         $this->email = $email;
         $this->senha = $senha;
         $this->ativo = $ativo;
@@ -54,11 +51,12 @@ class Cliente
 
     private function verificaCliente(): bool
     {
-        // $this->idCliente = $idCliente;
+        // $this->idFuncionario = $idFuncionario;
         if (
             !isset($this->nome) || !isset($this->dataNascimento) || !isset($this->orgao) ||
-            !isset($this->rg) || !isset($this->cpf) || !isset($this->estadoCivil) || !isset($this->sexo) ||
-            !isset($this->email) || !isset($this->senha) || !isset($this->ativo)
+            !isset($this->cpf) || !isset($this->estadoCivil) || !isset($this->tipo) ||
+            !isset($this->celular) || !isset($this->email) || !isset($this->senha) ||
+            !isset($this->ativo)
         ) {
             return false;
         }
@@ -67,14 +65,14 @@ class Cliente
 
 
     //Metodos acessores Getters e Setters 
-    public function getIdCliente(): int
+    public function getIdFuncionario(): int
     {
-        return $this->idCliente;
+        return $this->idFuncionario;
     }
 
-    public function setIdCliente(int $idCliente): void
+    public function setIdFuncionario(int $idFuncionario): void
     {
-        $this->idCliente = $idCliente;
+        $this->idFuncionario = $idFuncionario;
     }
 
     public function getNome(): string
@@ -95,26 +93,6 @@ class Cliente
     public function setDataNascimento(string $dataNascimento): void
     {
         $this->dataNascimento = $dataNascimento;
-    }
-
-    public function getOrgao(): string
-    {
-        return $this->orgao;
-    }
-
-    public function setOrgao(string $orgao): void
-    {
-        $this->orgao = $orgao;
-    }
-
-    public function getRg(): string
-    {
-        return $this->rg;
-    }
-
-    public function setRg(string $rg): void
-    {
-        $this->rg = $rg;
     }
 
     public function getCpf(): string
@@ -138,14 +116,24 @@ class Cliente
         $this->estadoCivil = $estadoCivil;
     }
 
-    public function getSexo(): string
+    public function getTipo(): string
     {
-        return $this->sexo;
+        return $this->tipo;
     }
 
-    public function setSexo(string $sexo): void
+    public function setTipo(string $tipo): void
     {
-        $this->sexo = $sexo;
+        $this->tipo = $tipo;
+    }
+
+    public function getCelular(): string
+    {
+        return $this->celular;
+    }
+
+    public function setCelular(string $celular): void
+    {
+        $this->celular = $celular;
     }
 
     public function getEmail(): string
