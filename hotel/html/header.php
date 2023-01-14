@@ -7,7 +7,7 @@ if(!isset($_SESSION)){
 <header>
 			<section>
 				<figure id="logo">
-					<img src="img/favicon.ico" alt="Logo">
+					<img src="img/image.jpg" alt="Logo">
 				</figure>
 				
 				<!-- <input type="text" name="buscar" id="buscar" placeholder="Busque aqui" > -->

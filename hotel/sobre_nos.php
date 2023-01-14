@@ -52,12 +52,12 @@
 			<p>
 				<q>Área de citação: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur pariatur qui voluptate adipisci quidem magnam error in, molestiae et perferendis consectetur assumenda porro maiores ullam veritatis laudantium, nostrum laboriosam.</q>
 			</p>
-			<cite>João de Santo Cristo</cite>
+			<cite>Marcos</cite>
 		</blockquote>
 		<figure>
-			<img src="img/Joâo de Santo Cristo.png" alt="Foto de João de Santo Cristo">
+			<img src="img/perfil.jpg" alt="Foto de Marcos">
 			<!-- <caption>Foto de João de Santo Cristo</caption> -->
-			<h1 id="nomeCliente">João de Santo Cristo</h1>
+			<h1 id="nomeCliente">Marcos</h1>
 		</figure>
 		<aside>
 			
