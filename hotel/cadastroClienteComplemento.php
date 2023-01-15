@@ -149,7 +149,7 @@ require_once "src/conexao.php";
                 <th>P</th>
                 <th>ID</th>
                 <th width="100">TIPO</th>
-                <th>LOGRADOURO</th>
+                <th>ENDEREÇO</th>
                 <th>NÚMERO</th>
                 <th>COMPLEMENTO</th>
                 <th>BAIRRO</th>
@@ -164,7 +164,7 @@ require_once "src/conexao.php";
                     <td><?= $i ?></td>
                     <td><?= $endereco["id"]; ?></td>
                     <td><?= $endereco["tipo"]; ?></td>
-                    <td><?= $endereco["logradouro"]; ?></td>
+                    <td><?= $endereco["endereco"]; ?></td>
                     <td><?= $endereco["numero"]; ?></td>
                     <td><?= $endereco["complemento"]; ?></td>
                     <td><?= $endereco["bairro"]; ?></td>
@@ -197,7 +197,7 @@ require_once "src/conexao.php";
   <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
 
   <!-- Contatos -->
-  <div class="accordion-item">
+  <!-- <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         <h5>Contatos</h5>
@@ -235,7 +235,7 @@ require_once "src/conexao.php";
                 <button class="btn btn-primary" type="submit" id="btn-on" >Cadastrar</button>
             </div>
         </form>
-    </div>
+    </div> -->
     <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 

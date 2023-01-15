@@ -27,11 +27,11 @@
         $sql_code = "INSERT INTO estoque VALUES (NULL, '$id_produto', '$qtd', '$registro', '$data_registro', '$valorC', '$valorV')";
         $sql_query = $conexao->query($sql_code);
         // var_dump($sql_query);
-        if ($sql_query) {
-            echo "Gravou!";
-        } else {
-            echo "Não gravou!";
-        }
+        // if ($sql_query) {
+        //     echo "Gravou!";
+        // } else {
+        //     echo "Não gravou!";
+        // }
     }
 
     $sql_code = "SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = '$id'";
